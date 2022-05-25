@@ -1,12 +1,15 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import "./App.css";
-import Form from "./examples/ex-forms/Form";
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Form />
+        <Button>Testo bottone</Button>
+        <Button className="m-2" variant="danger">
+          Testo bottone danger
+        </Button>
       </div>
     );
   }
