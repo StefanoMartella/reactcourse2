@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import AddProductForm from "./exercises/ex-forms/AddProductForm";
+import Todo from "./exercises/ex-todo/Todo";
 
 class App extends React.Component {
   constructor(props) {
@@ -11,18 +11,7 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-      <>
-        <button
-          onClick={() =>
-            this.setState((oldState) => ({ isVisible: !oldState.isVisible }))
-          }
-        >
-          Toggle
-        </button>
-        <div className="App">{this.state.isVisible && <AddProductForm />}</div>
-      </>
-    );
+    return <Todo />;
   }
 }
 
