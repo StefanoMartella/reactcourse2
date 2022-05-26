@@ -1,4 +1,5 @@
 import React from "react";
+import themes from "../context/theme";
 import { ThemeContext } from "./../context/ThemeContext";
 
 class Navbar extends React.Component {
@@ -16,7 +17,9 @@ class Navbar extends React.Component {
               style={{ backgroundColor: theme.secondaryBackground }}
               className="py-2 px-4 rounded text-uppercase border-0"
             >
-              <span style={{ color: theme.secondaryText }}>Cambia tema</span>
+              <span style={{ color: theme.secondaryText }}>
+                {theme === themes.light ? "Dark" : "Light"}
+              </span>
             </button>
           </nav>
         )}
