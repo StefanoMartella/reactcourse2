@@ -1,18 +1,17 @@
 import React from "react";
 import "./App.css";
-import Todo from "./exercises/ex-todo/Todo";
+import ThemeProvider from "./examples/ex-context/with-context/context/ThemeContext";
+import Homepage from "./examples/ex-context/with-context/Homepage";
+import Layout from "./examples/ex-context/with-context/Layout";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isVisible: true,
-    };
-  }
-
-  render() {
-    return <Todo />;
-  }
+function App() {
+  return (
+    <ThemeProvider>
+      <Layout>
+        <Homepage />
+      </Layout>
+    </ThemeProvider>
+  );
 }
 
 export default App;
