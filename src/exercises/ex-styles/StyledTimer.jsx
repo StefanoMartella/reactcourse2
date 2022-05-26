@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  align-self: center;
+  width: 448px;
   border-radius: 12px;
   padding: 32px;
   background: #fafafa;

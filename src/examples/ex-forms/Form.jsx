@@ -48,11 +48,7 @@ function Form() {
         {errors.surname && renderError(errors.surname.message)}
       </div>
 
-      <button
-        disabled={Object.keys(errors).length > 1}
-        className="mt-2"
-        type="submit"
-      >
+      <button className="mt-2" type="submit">
         Invia
       </button>
     </form>
