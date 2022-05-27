@@ -7,14 +7,14 @@ class TodoItem extends React.Component {
     setTodos((oldTodos) => oldTodos.filter((aTodo) => aTodo.id !== todo.id));
   };
 
-  toggleTodo() {
+  toggleTodo = () => {
     const { todo, setTodos } = this.props;
     setTodos((oldTodos) =>
       oldTodos.map((aTodo) =>
         aTodo.id === todo.id ? { ...aTodo, done: !aTodo.done } : aTodo
       )
     );
-  }
+  };
 
   render() {
     const { todo } = this.props;
@@ -27,7 +27,7 @@ class TodoItem extends React.Component {
         </Accordion.Header>
         <Accordion.Body>
           {todo.description}
-          <div className="mt-4 d-flex flex-row flex-row-reverse">
+          <div className="mt-4 d-flex flex-row-reverse">
             <Button variant="danger" onClick={this.deleteTodo}>
               Cancella
             </Button>
