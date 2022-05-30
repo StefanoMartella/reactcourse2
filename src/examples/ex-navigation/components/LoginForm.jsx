@@ -46,7 +46,7 @@ function LoginForm({ onSubmit }) {
           })}
           className="form-control"
           rows="5"
-          type="text"
+          type="password"
           placeholder="Password"
         />
         {errors.password && renderError(errors.password.message)}
