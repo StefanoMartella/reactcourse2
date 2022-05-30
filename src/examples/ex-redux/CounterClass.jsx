@@ -24,13 +24,13 @@ export const mapStateToProps = (state) => ({
   counter: state.counter.counter,
 });
 
-// export const mapDispatchToProps = (dispatch) => ({
-//   increaseCounter: () => dispatch(increaseCounter()),
-//   decreaseCounter: () => dispatch(decreaseCounter()),
-// });
+export const mapDispatchToProps = (dispatch) => ({
+  increaseCounter: () => dispatch(increaseCounter()),
+  decreaseCounter: () => dispatch(decreaseCounter()),
+});
 
-export const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ increaseCounter, decreaseCounter }, dispatch);
-};
+// export const mapDispatchToProps = (dispatch) => {
+//   return bindActionCreators({ increaseCounter, decreaseCounter }, dispatch);
+// };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CounterClass);
