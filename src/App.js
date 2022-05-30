@@ -1,16 +1,17 @@
 import React from "react";
+import { Provider } from "react-redux";
 import "./App.css";
-import ThemeProvider from "./examples/ex-context/with-context/context/ThemeContext";
-import Homepage from "./examples/ex-context/with-context/Homepage";
-import Layout from "./examples/ex-context/with-context/Layout";
+import Todo from "./exercises/ex-todo-context/Todo";
+import configureStore from "./examples/ex-redux/reducers/configureStore";
+import Counter from "./examples/ex-redux/Counter";
+
+const store = configureStore();
 
 function App() {
   return (
-    <ThemeProvider>
-      <Layout>
-        <Homepage />
-      </Layout>
-    </ThemeProvider>
+    <Provider store={store}>
+      <Counter />
+    </Provider>
   );
 }
 

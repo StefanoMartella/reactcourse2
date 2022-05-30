@@ -2,7 +2,7 @@ import React from "react";
 import { ThemeContext } from "./context/ThemeContext";
 
 class Homepage extends React.Component {
-  static contextType = ThemeContext;
+  // static contextType = ThemeContext;
 
   render() {
     return (
@@ -16,6 +16,6 @@ class Homepage extends React.Component {
   }
 }
 
-// Homepage.contextType = ThemeContext;
+Homepage.contextType = ThemeContext;
 
 export default Homepage;
