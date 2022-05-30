@@ -7,7 +7,7 @@ import {
 
 function Counter() {
   const dispatch = useDispatch();
-  const { counter } = useSelector((state) => state.counter);
+  const counter = useSelector((state) => state.counter.counter);
 
   return (
     <div className="m-4">
